@@ -5,12 +5,7 @@
     },
     "problem_type": "BinPackingWithConflicts",
     "description": "In the bin packing with conflicts problem, a number of items with known weights must be assigned to bins with uniform capacity. Furthermore, each item is in conflict with a list of forbidden items. Conflicting items cannot be placed in the same bin. The objective is to minimize the number of bins used.",
-    "keywords": [
-      "bin packing",
-      "conflicts",
-      "NP-hard",
-      "optimization"
-    ],
+    "keywords": ["bin packing", "conflicts", "combinatorial", "assignment", "optimization"],
     "data_format": {
       "instance_file": {
         "format": "First line: number of items and bin capacity. For each subsequent line: item identifier, item weight, followed by the identifiers of items in conflict with that item."
