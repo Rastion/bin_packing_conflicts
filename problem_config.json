@@ -7,7 +7,7 @@
   "type": "problem",
   "problem_name": "Bin packing with conflicts",
   "description": "In the bin packing with conflicts problem, a number of items with known weights must be assigned to bins with uniform capacity. Furthermore, each item is in conflict with a list of forbidden items. Conflicting items cannot be placed in the same bin. The objective is to minimize the number of bins used.",
-  "link_to_dataset": "https://github.com/Rastion/bin_packing/blob/main/instances/t120_00.txt",
+  "link_to_dataset": "https://github.com/Rastion/bin_packing_conflicts/blob/main/instances/BPPC_1_0_2.txt",
   "keywords": [
     "bin packing",
     "conflicts",
