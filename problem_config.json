@@ -1,35 +1,39 @@
 {
-    "entry_point": "bin_packing_conflicts_problem:BinPackingWithConflictsProblem",
-    "default_params": {
-      "instance_file": "instances/BPPC_1_0_2.txt"
-    },
-    "problem_type": "BinPackingWithConflicts",
-    "description": "In the bin packing with conflicts problem, a number of items with known weights must be assigned to bins with uniform capacity. Furthermore, each item is in conflict with a list of forbidden items. Conflicting items cannot be placed in the same bin. The objective is to minimize the number of bins used.",
-    "keywords": ["bin packing", "conflicts", "combinatorial", "assignment", "optimization"],
-    "data_format": {
-      "instance_file": {
-        "format": "First line: number of items and bin capacity. For each subsequent line: item identifier, item weight, followed by the identifiers of items in conflict with that item."
-      }
-    },
-    "decision_variables": {
-      "bin_assignment": {
-        "type": "list of int",
-        "description": "A list of length equal to the number of items, where each integer represents the 0-indexed bin assignment for the corresponding item."
-      }
-    },
-    "objective": {
-      "type": "minimization",
-      "function": "Number of bins used",
-      "description": "Minimize the number of bins used (i.e., the count of unique bin indices) while ensuring that for each bin the total weight does not exceed the bin capacity and that conflicting items are not placed in the same bin."
-    },
-    "solution_representation": "A list of integers of length equal to the number of items, where each integer represents the assigned bin (0-indexed).",
-    "compatible_optimizers": [
-      "genetic_algorithm",
-      "simulated_annealing",
-      "particle_swarm",
-      "tabu_search",
-      "greedy"
-    ],
-    "notes": "Instances are taken from the Muritiba instances in the BPPLIB. This problem generalizes both the bin packing and vertex coloring problems."
+  "entry_point": "bin_packing_conflicts_problem:BinPackingWithConflictsProblem",
+  "default_params": {
+    "instance_file": "instances/BPPC_1_0_2.txt"
+  },
+  "creator": "Rastion",
+  "type": "problem",
+  "problem_name": "Bin packing with conflicts",
+  "description": "In the bin packing with conflicts problem, a number of items with known weights must be assigned to bins with uniform capacity. Furthermore, each item is in conflict with a list of forbidden items. Conflicting items cannot be placed in the same bin. The objective is to minimize the number of bins used.",
+  "link_to_dataset": "https://github.com/Rastion/bin_packing/blob/main/instances/t120_00.txt",
+  "keywords": [
+    "bin packing",
+    "conflicts",
+    "NP-hard",
+    "optimization",
+    "supply-chain"
+  ],
+  "data_format": {
+    "instance_file": {
+      "format": "First line: number of items and bin capacity. For each subsequent line: item identifier, item weight, followed by the identifiers of items in conflict with that item."
+    }
+  },
+  "decision_variables": {
+    "bin_assignment": {
+      "type": "list of int",
+      "description": "A list of length equal to the number of items, where each integer represents the 0-indexed bin assignment for the corresponding item."
+    }
+  },
+  "objective": {
+    "type": "minimization",
+    "function": "Number of bins used",
+    "description": "Minimize the number of bins used (i.e., the count of unique bin indices) while ensuring that for each bin the total weight does not exceed the bin capacity and that conflicting items are not placed in the same bin."
+  },
+  "solution_representation": "A list of integers of length equal to the number of items, where each integer represents the assigned bin (0-indexed).",
+  "formulations": [
+    ""
+  ]
   }
   
